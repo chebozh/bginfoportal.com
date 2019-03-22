@@ -1,3 +1,6 @@
+import os
+
+
 class Config:
-    SECRET_KEY = '0446cb51fab4223236474ad340503b47'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'sqlite:///bginfoportal.db'
