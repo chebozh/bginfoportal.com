@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Новини: тема Свят</h2>
+    {% for article in articles.items %}
+        <article class="media content-section">
+            <img class="square article-img" src="{{ url_for('static', filename='article_pics/world.jpg') }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                     <h5><a class="article-title" href="{{ article.url }}">{{ article.title }}</a></h5>
+                </div>
+                <label>Източник: <a class="mr-2" href={{ article.site_base_url }}>{{ article.site_base_url }}</a></label>
+                <small class="text-muted">{{ article.date_added }}</small>
+{#                <p class="article-content">{{ article.url }}</p>#}
+                </div>
+        </article>
+    {% endfor %}
+
+    {% for page_num in articles.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2)%}
+        {% if page_num %}
+            {% if articles.page == page_num %}
+                <a class="btn btn-info mb-4" href="{{ url_for('main.world', page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+                <a class="btn btn-outline-info mb-4" href="{{ url_for('main.world', page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+        {% else %}
+            ...
+        {% endif %}
+    {%  endfor %}
+
+{% endblock content%}
+
