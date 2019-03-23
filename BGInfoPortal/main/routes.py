@@ -22,7 +22,7 @@ def bulgaria():
 def world():
     page = request.args.get('page', 1, type=int)
     articles = Article.query.filter_by(category='world').order_by(Article.date_added.desc()).paginate(page=page,
-                                                                                                      per_page=10)
+                                                                                                      per_page=15)
     return render_template('world.html', articles=articles)
 
 
@@ -30,7 +30,7 @@ def world():
 def technology():
     page = request.args.get('page', 1, type=int)
     articles = Article.query.filter_by(category='tech').order_by(Article.date_added.desc()).paginate(page=page,
-                                                                                                     per_page=10)
+                                                                                                     per_page=15)
     return render_template('technology.html', articles=articles)
 
 
@@ -38,7 +38,7 @@ def technology():
 def economics():
     page = request.args.get('page', 1, type=int)
     articles = Article.query.filter_by(category='business').order_by(Article.date_added.desc()).paginate(page=page,
-                                                                                                         per_page=10)
+                                                                                                         per_page=15)
     return render_template('economics.html', articles=articles)
 
 
@@ -54,5 +54,5 @@ def sport():
 def interesting():
     page = request.args.get('page', 1, type=int)
     articles = Article.query.filter_by(category='other').order_by(Article.date_added.desc()).paginate(page=page,
-                                                                                                      per_page=10)
+                                                                                                      per_page=15)
     return render_template('interesting.html', articles=articles)
