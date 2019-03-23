@@ -7,7 +7,7 @@
             <img class="square article-img" src="{{ url_for('static', filename='article_pics/economics.jpg') }}">
             <div class="media-body">
                 <div class="article-metadata">
-                     <h5><a class="article-title" href="{{ article.url }}">{{ article.title }}</a></h5>
+                     <h5><a class="article-title" href="{{ article.url }}" target="_blank">{{ article.title }}</a></h5>
                 </div>
                 <label>Източник: <a class="mr-2" href={{ article.site_base_url }}>{{ article.site_base_url }}</a></label>
                 <small class="text-muted">{{ article.date_added }}</small>
