@@ -8,5 +8,7 @@ in a separate project.
 The website is currently hosted on a popular cloud platform using a free plan so performance might not always be stellar. But generally it seems ok.
 I'm also thinking of adding some features in the near future. 
 
+Technologies used - Python, Flask, Flask-SQLAlchemy, Bootstrap
+
 ## Contributing
 Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change.
