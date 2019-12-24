@@ -1,4 +1,4 @@
-# bginfoportal.com
+# https://bginfoportal.herokuapp.com/
 
 This project is a small Bulgarian-language news aggregator website. It's a platform that gathers the most interesting news from top Bulgarian news websites.
 It's a purely toy-project I worked on in my spare time with no commercial purposes. It was made with the idea to practice building something with Flask and web scraping.
